@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Python-Platform Condition="'$(Platform)' == 'Win32'">x86</Python-Platform>
+    <Python-Platform Condition="'$(Platform)' == 'x64'">x64</Python-Platform>
+
+  </PropertyGroup>
+
+ <ItemDefinitionGroup Condition="$(Configuration.IndexOf('Release')) != -1">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>_bsddb.lib;_ctypes.lib;_ctypes_test.lib;_elementtree.lib;_hashlib.lib;_msi.lib;_multiprocessing.lib;_socket.lib;_sqlite3.lib;_ssl.lib;_testcapi.lib;_tkinter.lib;bz2.lib;pyexpat.lib;python27.lib;select.lib;unicodedata.lib;winsound.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+ <ItemDefinitionGroup Condition="$(Configuration.IndexOf('Debug')) != -1">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>_ctypes_d.lib;_ctypes_test_d.lib;_elementtree_d.lib;_msi_d.lib;_multiprocessing_d.lib;_socket_d.lib;_testcapi_d.lib;pyexpat_d.lib;python27_d.lib;select_d.lib;unicodedata_d.lib;winsound_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32' And $(Configuration.IndexOf('Release')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64' And $(Configuration.IndexOf('Release')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32' And $(Configuration.IndexOf('Debug')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\x86debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64' And $(Configuration.IndexOf('Debug')) != -1">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\x64debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+</Project>

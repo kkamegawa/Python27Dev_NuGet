@@ -1,0 +1,5 @@
+nuget.exe
+*.nupkg
+*.suo
+.vs/*
+

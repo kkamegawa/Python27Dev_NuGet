@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata minClientVersion="2.8.6">
+        <id>Python27Dev</id>
+        <version>1.0.0-SpecifyVersionOnCommandline</version>
+        <title>Python27Dev</title>
+        <authors>Kazushi Kamegawa</authors>
+        <owners>Kazushi Kamegawa</owners>
+        <description>Python2.7 unofficial  dev environment package x64 and x86</description>
+        <projectUrl>https://github.com/kkamegawa/Python27dev_Nuget</projectUrl>
+        <licenseUrl>$LicenseUrl$</licenseUrl>
+        <requireLicenseAcceptance>$RequireLicenseAcceptance$</requireLicenseAcceptance>
+        <copyright>Copyright (c) Kazushi Kamegawa. All rights reserved.</copyright>
+        <tags>Python C++ Library Native x64 x86</tags>
+        <language>en-us</language>
+        <summary>Python 2.7 unofficial dev environment package</summary>
+    </metadata>
+
+    <files>
+
+      <file target="lib\x64"     src="lib\x64\*" />
+      <file target="lib\x86"     src="lib\x86\*" />
+      <file target="lib\x64debug"     src="lib\x64debug\*" />
+      <file target="lib\x86debug"     src="lib\x86debug\*" />
+
+      <file target="build\native\Python27dev.targets"  src="nuget\Python27dev.targets" />
+
+      <file target="include"        src="include\*"/>
+
+    </files>
+</package>
