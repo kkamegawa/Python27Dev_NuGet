@@ -21,7 +21,7 @@
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>_ctypes_d.lib;_ctypes_test_d.lib;_elementtree_d.lib;_msi_d.lib;_multiprocessing_d.lib;_socket_d.lib;_testcapi_d.lib;pyexpat_d.lib;python27_d.lib;select_d.lib;unicodedata_d.lib;winsound_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>_bsddb_d.lib;_ctypes_d.lib;_ctypes_test_d.lib;_elementtree_d.lib;_msi_d.lib;_multiprocessing_d.lib;_socket_d.lib;_sqlite3_d.lib;_testcapi_d.lib;bz2_d.lib;pyexpat_d.lib;python27_d.lib;select_d.lib;sqlite3_d.lib;unicodedata_d.lib;winsound_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 
