@@ -6,7 +6,7 @@
         <title>Python27Dev</title>
         <authors>Kazushi Kamegawa</authors>
         <owners>Kazushi Kamegawa</owners>
-        <description>Python2.7 unofficial  dev environment package x64 and x86(2.7.12 is changes only nuget version number)</description>
+        <description>Python2.7 unofficial  dev environment package x64 and x86</description>
         <projectUrl>https://github.com/kkamegawa/Python27dev_Nuget</projectUrl>
         <licenseUrl>$LicenseUrl$</licenseUrl>
         <requireLicenseAcceptance>$RequireLicenseAcceptance$</requireLicenseAcceptance>
